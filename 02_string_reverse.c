@@ -10,7 +10,6 @@ int top =-1;
 void menu(){
 	printf("\n-------------This is a program for stack------------\n\t1. Push \n\t2. Display\n\t3. Pop\n\t4. exit\n");
 
-
 }
 void str_push(char *str){
 
