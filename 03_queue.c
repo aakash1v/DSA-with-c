@@ -1,3 +1,5 @@
+// Program for linear queue....
+
 #include<stdio.h>
 
 #define max 5

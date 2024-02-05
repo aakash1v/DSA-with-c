@@ -36,11 +36,11 @@ void push(){
 	}
 	else{
 		int item;
-		printf("Enter the value : ");
-		scanf("%d",&item);
+		// printf("Enter the value : ");
+		// scanf("%d",&item);
 		top = top+1;
 		stack[top] = item;
-		printf("value is successfully added ..\n");
+		// printf("value is successfully added ..\n");
 	}
 }
 
@@ -55,7 +55,8 @@ void pop(){
 	}
 }
 
-int main(){
+int man(){
+// int main(){
 int input;
 do{
 menu();
