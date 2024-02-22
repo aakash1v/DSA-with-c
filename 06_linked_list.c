@@ -18,6 +18,7 @@ void inp_user(){
     printf("Enter the element : ");
     scanf("%d",&item);
     ptr->data = item;
+    printf("%d is successflly inserted .\n",item);
 
 }
 
@@ -195,7 +196,7 @@ void display(){
     }
 }
 void main(){
-    int choice;
+    int choice=0;
     do{
         printf("-------------This is a program for singly linked list-------------------\n");
         printf("1. Inserting a node at starting postion \n");
@@ -237,6 +238,6 @@ void main(){
         }
 
     }while(choice!=8);
-
+printf("Out of the loop......bye bye..");
 
 }
