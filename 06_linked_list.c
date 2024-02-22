@@ -25,7 +25,7 @@ void inp_user(){
 void insert_start(){
    ptr = (struct node *)malloc(sizeof(struct node));
     if (ptr==NULL){
-        printf("Singly Linked list is over flow...");
+        printf("Singly Linked list is over flow...\n");
     }
     else{
         inp_user();
@@ -44,7 +44,7 @@ void insert_start(){
 void insert_end(){
     ptr = (struct node *)malloc(sizeof(struct node));
     if (ptr==NULL){
-        printf("Singly Linked list is over flow...");
+        printf("Singly Linked list is over flow...\n");
     }
     else{
         inp_user();
@@ -68,7 +68,7 @@ void insert_end(){
 void insert_sep(){
     ptr = (struct node *)malloc(sizeof(struct node));
     if (ptr==NULL){
-        printf("Singly Linked list is over flow...");
+        printf("Singly Linked list is over flow...\n");
     }
     else{
         int count =0;
@@ -93,7 +93,7 @@ void insert_sep(){
             ptr1->next = ptr;
         }
         else{
-            printf("Please Enter a valid position. :(");
+            printf("Please Enter a valid position. :(\n");
         }
        
     }
@@ -101,7 +101,7 @@ void insert_sep(){
 // 3. Algorithm for deleting a node from the starting positon ..
 void del_start(){
     if (start==NULL){
-        printf("Singly Linked list is Under flow...");
+        printf("Singly Linked list is Under flow...\n");
     }
     else{
 
@@ -109,13 +109,13 @@ void del_start(){
         item = ptr1->data;
         start = start->next;
         free(ptr1);
-        printf("%d is deleted ",item);
+        printf("%d is deleted \n",item);
     }
 }
 // 4. Algorithm for deleting a node from the ending positon ..
 void del_end(){
     if (start==NULL){
-        printf("Singly Linked list is Under flow...");
+        printf("Singly Linked list is Under flow...\n");
     }
     else{
         struct node * ptr1= start;
@@ -127,20 +127,20 @@ void del_end(){
             ptr1->next = NULL;
             item = ptr2->data;
             free(ptr2);
-            printf("%d is deleted ",item);
+            printf("%d is deleted \n",item);
         }
         else{
             item= ptr1->data;
             start = start->next;
             free(ptr1);
-            printf("%d is deleted ",item);
+            printf("%d is deleted \n",item);
         }
     }
 }
 // 5. Algorithm for deleting a node from the specified positon ..
 void del_sep(){
     if (start==NULL){
-        printf("Singly Linked list is Under flow...");
+        printf("Singly Linked list is Under flow...\n");
     }
     else{
         struct node * ptr1= start;
@@ -168,10 +168,10 @@ void del_sep(){
                 ptr1->next = ptr2->next;
                 item = ptr2->data;
                 free(ptr2);
-                printf("%d is deleted ",item);
+                printf("%d is deleted \n",item);
             }
             else{
-                printf("Please Enter a valid position. :(");
+                printf("Please Enter a valid position. :(\n");
             }
         }
            
