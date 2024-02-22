@@ -98,7 +98,7 @@ void insert_sep(){
        
     }
 }
-// 3. Algorithm for deleting a node from the starting positon ..
+// 4. Algorithm for deleting a node from the starting positon ..
 void del_start(){
     if (start==NULL){
         printf("Singly Linked list is Under flow...\n");
@@ -112,7 +112,7 @@ void del_start(){
         printf("%d is deleted \n",item);
     }
 }
-// 4. Algorithm for deleting a node from the ending positon ..
+// 5. Algorithm for deleting a node from the ending positon ..
 void del_end(){
     if (start==NULL){
         printf("Singly Linked list is Under flow...\n");
@@ -137,7 +137,7 @@ void del_end(){
         }
     }
 }
-// 5. Algorithm for deleting a node from the specified positon ..
+// 6. Algorithm for deleting a node from the specified positon ..
 void del_sep(){
     if (start==NULL){
         printf("Singly Linked list is Under flow...\n");
@@ -151,7 +151,7 @@ void del_sep(){
             }
 
         if(start->next!=NULL){
-            while(ptr1->next->next!=NULL){
+            while(ptr1->next!=NULL){
                 ptr1=ptr1->next;    
             }
             // taking the input from user..
@@ -180,13 +180,18 @@ void del_sep(){
 
 //displaying output...
 void display(){
-    struct node * ptr1= start;
-    printf("Elements of linked list ..\n");
-    while(ptr1->next!=NULL){
-        printf("%d ",ptr1->data);
-        ptr1=ptr1->next;    
-        }
-    printf("\n");
+    if (start ==NULL){
+        printf("Singly linked list is Empty..\n");
+    }
+    else{
+        struct node * ptr1= start;
+        printf("Elements of linked list ..\n");
+        while(ptr1->next!=NULL){
+            printf("%d ",ptr1->data);
+            ptr1=ptr1->next;    
+            }
+        printf("\n");
+    }
 }
 void main(){
     int choice;
@@ -198,7 +203,7 @@ void main(){
         printf("4. Deleting  a node from starting postion \n");
         printf("5. Deleting  a node from ending postion \n");
         printf("6. Deleting  a node from  specified postion \n");
-        printf("6. Display the linked list \n");
+        printf("7. Display the linked list \n");
         printf("8. Exit  \n");
         
         printf("Enter your choice : ");
