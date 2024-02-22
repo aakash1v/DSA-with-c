@@ -184,12 +184,13 @@ void display(){
         printf("Singly linked list is Empty..\n");
     }
     else{
-        struct node * ptr1= start;
+        struct node * ptr1 = start;
         printf("Elements of linked list ..\n");
         while(ptr1->next!=NULL){
             printf("%d ",ptr1->data);
             ptr1=ptr1->next;    
             }
+        printf("%d",ptr1->data);
         printf("\n");
     }
 }
