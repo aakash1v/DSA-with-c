@@ -93,7 +93,7 @@ void insert_sep(){
             ptr1->next = ptr;
         }
         else{
-            ptrintf("Please Enter a valid position. :(");
+            printf("Please Enter a valid position. :(");
         }
        
     }
@@ -171,16 +171,66 @@ void del_sep(){
                 printf("%d is deleted ",item);
             }
             else{
-                ptrintf("Please Enter a valid position. :(");
+                printf("Please Enter a valid position. :(");
             }
         }
            
     }
 }
+
+//displaying output...
+void display(){
+    struct node * ptr1= start;
+    printf("Elements of linked list ..\n");
+    while(ptr1->next!=NULL){
+        printf("%d ",ptr1->data);
+        ptr1=ptr1->next;    
+        }
+    printf("\n");
+}
 void main(){
+    int choice;
+    do{
+        printf("-------------This is a program for singly linked list-------------------\n");
+        printf("1. Inserting a node at starting postion \n");
+        printf("2. Inserting a node at ending postion \n");
+        printf("3. Inserting a node after  specified postion \n");
+        printf("4. Deleting  a node from starting postion \n");
+        printf("5. Deleting  a node from ending postion \n");
+        printf("6. Deleting  a node from  specified postion \n");
+        printf("6. Display the linked list \n");
+        printf("8. Exit  \n");
+        
+        printf("Enter your choice : ");
+        scanf("%d",&choice);
+        switch (choice)
+        {
+        case 1:
+            insert_start();
+            break;
+        case 2:
+            insert_end();
+            break;
+        case 3:
+            insert_sep();
+            break;
+        case 4:
+            del_start();
+            break;
+        case 5:
+            del_end();
+            break;
+        case 6:
+            del_sep();
+            break;
+        case 7:
+            display();
+            break;
+        default:
+            break;
+        }
 
-    
-
+    }while(choice!=8);
 
 
 }
